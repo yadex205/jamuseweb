@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>ジャミューズ合同誌「テイレシアスの悪戯」告知サイト</title>
+    <script src="js/vue.min.js"></script>
+    <script src="js/app.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/base.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  </head>
+  <body>
+    <header>
+      <div class="subid">A Joke of T<span class="female">i</span>res<span class="male">i</span>as</div>
+      <input type="checkbox" value="false" id="menu_trigger_checkbox"/>
+      <label for="menu_trigger_checkbox" class="menu_trigger">Menu</label>
+      <ul class="menu" data-vue-el="menu">
+	<a href="#top"><li>Top</li></a>
+	<a href="#introduction"><li>Overture</li></a>
+	<a href="#entries"><li>Entries</li></a>
+	<a href="#faq"><li>FAQ</li></a>
+	<a href="#distribution"><li>Distribution</li></a>
+	<a href="#staff"><li>Staff</li></a>
+	<a href="#links"><li>Links</li></a>
+      </ul>
+    </header>
+    <section id="top" class="section_top">
+      <div id="id_image"></div>
+      <div class="mainlogo_wrapper">
+	<img alt="テイレシアスの悪戯 ロゴ" src="images/mainlogo.png" class="logo_main" />
+      </div>
+    </section>
+    <section id="introduction">
+      <p class="top">
+	総勢約30名の豪華メンバーによる、<br>
+	男の子になった<i>&mu;</i>'s達の世界。
+      </p>
+      <div class="detail_wrapper">
+	<div class="detail">
+	  <p>
+	    みなさんはラブライブ! 4thライブのチケット付属のドラマCDの内容をご存知でしょうか?
+	  </p>
+	  <p>
+	    間単に言うと、<i>&mu;</i>'s達が「もし誰々ちゃんが男の子だったら?」という妄想をひたすらするというコメディで、
+	    男の子になった<i>&mu;</i>'sくんと女の子のままの<i>&mu;</i>'sちゃんのお話です。
+	  </p>
+	  <p>
+	    公式で公野櫻子先生がやってくださっているのなら、じゃあわたしたちもやってみてもいいんじゃない？
+	    公野神にあやかってもいいんじゃない!?
+	  </p>
+	  <p>
+	    ということでやってみましょう<i>&mu;</i>'s性転換、通称ジャミューズアンソロジー!
+	  </p>
+	</div>
+	<div class="detail">
+	  Did you know about the Audio Drama CD attached to chicket of "Love Live! 4th Live" ?<br><br>
+	  In short, the contents is that <i>&mu;'s</i> members talk about "What do you think if someone of us is a boy?"
+	  and short story of "Boys and Girls" <i>&mu;'s</i>.<br><br>
+	  Such a thing is there, so why don't we dive to the delusion world!?
+	  Let's make up <i>&mu;'s</i> Female to Male "Jamuse" Anthology!!
+	</div>
+      </div>      
+    </section>
+    <section id="entries">
+      <p class="top">
+	Entries/参加者 <span style="color: #666;">(敬称略)</span>
+      </p>
+      <div class="entries-header">
+	クリックするとサンプルが表示されます。 / Click to show samples.
+      </div>
+      <div class="entries-stream">
+	<div data-vue-repeat="person: entries"
+	     class="entries-stream-item"
+	     data-vue-on="click: popup($index, $event)"
+	     data-vue-style="background-image: 'url(images/entries/thumb/' + person.image + ')'">
+	  <div class="info">
+	    <div class="text">
+	      <div class="name">{{person.name}}</div>
+	      <div class="genre">{{person.subgenre}} {{person.genre}}</div>
+	    </div>
+	    <a href="https://twitter.com/{{person.twitter}}" target="_blank" data-vue-if="person.twitter">
+	      <span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x"></i>
+		<i class="fa fa-twitter fa-stack-1x" style="color: white;"></i>
+	      </span>
+	    </a>
+	    <span class="fa-stack fa-lg" data-vue-if="!person.twitter">
+	      <i class="fa fa-circle fa-stack-2x"></i>
+	    </span>	    
+	    <a href="{{person.website}}" target="_blank" data-vue-if="person.website">
+	      <span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x"></i>
+		<i class="fa fa-home fa-stack-1x" style="color: white;"></i>
+	      </span>
+	    </a>
+	    <span class="fa-stack fa-lg" data-vue-if="!person.website">
+	      <i class="fa fa-circle fa-stack-2x"></i>
+	    </span>	    
+	  </div>
+	</div>
+      </div>
+    </section>
+    <section id="faq">
+      <p class="top">FAQ</p>
+      <div class="faq">
+	<dl>
+	  <dt>"ジャミューズ" ってなに?</dt>
+	  <dd>
+	    <p>
+	      言わずと知れた「ラブライブ！」の主人公たち、<i>&mu;</i>'sを性転換させた少年たちの俗称です。
+	      某有名男性アイドル事務所になぞらえられてこう呼ばれることが多いため、今回のアンソロジーの名称にも採用しています。
+	    </p>
+	  </dd>
+	  <dt>ボーイズラブは含みますか?</dt>
+	  <dd>
+	    <p>
+	      結論から申し上げますといわゆる「ボーイズラブ」のような、男性同士の恋愛表現はありません。
+	      ただ、全員性転換された男子校のような設定で描かれた作品も存在するため、それも苦手な方はお気をつけ下さい。
+	    </p>
+	    <p>
+	      今回のアンソロジーの出発点は、『ラブライブ！ <i>&mu;</i>'s →NEXT LoveLive！2014 ～ENDLESS PARADE～』
+	      プレミアムチケット付属のスペシャルドラマCDの内容が、「<i>&mu;</i>'sのメンバーが男の子になったらどうなるだろう」と
+	      彼女たちが妄想するといった性転換ネタを取り扱ったものであるというところにあります。
+	      そのドラマCDでは（ギャグテイストであるものの）男女の関係を描いており、今回のアンソロジーでも
+	      その延長線上にあるようなものにしたいという意向があったためです。
+	    </p>
+	    <p>
+	      どこまでを延長線上とするかは各々の主観に委ねられるためこれが正解とは申し上げませんが、
+	      今回は「男性同士の恋愛表現は描かない」という線引きをさせていただきました。
+	    </p>
+	  </dd>	  
+	</dl>
+      </div>
+      
+    </section>
+    <section id="distribution">
+      <p class="top">Distribution/頒布概要</p>
+      <div class="article">
+	<h1>- 頒布 -</h1>
+	<del>
+	  <ul class="fa-ul">
+	    <li>
+	      <i class="fa-li fa-lg fa fa-at"></i>
+	      僕らのラブライブ! 7<br>
+	      立35,36 「WhiteLine+MeltyBlue」<br>
+	      (3/15(<span style="color: red;">日</span>) 大田区産業プラザPio)
+	    </li>
+	    <li><i class="fa-li fa-lg fa fa-jpy"></i>1200円</li>
+	    <li><i class="fa-li fa-lg fa fa-book"></i>全188P (表紙含/フルカラー12P)<br>箔押し・特殊PP加工・遊び紙入り</li>
+	    <li><i class="fa-li fa-lg fa fa-star"></i>会場限定しおり付き(先着順)</li>
+	  </ul>
+	  </del>
+	<div class="itaku">
+	  会場での頒布は終了しております。お求め頂き、ありがとうございました。<br>
+	  現在は以下の委託先にてお求め頂けます。
+	  </div>
+	<h1>- 委託 -</h1>
+	<div class="itaku">
+	  ※ 現在委託させていただいたものの内、通販での取り扱い分についてはご好評につき完売致しました。誠にありがとうございます。<br>
+	  再販につきましては未定となっております。どうかご了承ください。
+	</div>
+	<div class="itaku">
+	  <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=122003" target="_blank">
+	    <img src="https://www.melonbooks.co.jp/user_data/bnr/banner_200x40.gif" width="200" height="40" alt="メロンブックス"><br>
+	    →詳細ページ
+	  </a>
+	</div>
+      </div>
+    </section>
+    <section id="staff">
+      <p class="top">Staff/主催</p>
+      <h1>- 主催 -</h1>
+      <ul class="fa-ul">
+	<li><i class="fa-li fa fa-user fa-lg"></i>白線 (White Line)</li>
+	<li><i class="fa-li fa fa-twitter fa-lg"></i><a href="https://twitter.com/hakusen_drw" target="_blank">@hakusen_drw</a></li>
+	<li><i class="fa-li fa fa-picture-o fa-lg"></i><a href="http://www.pixiv.net/member.php?id=47087" target="_blank">Pixiv (id: 47087)</a></li>
+	<li><i class="fa-li fa fa-tumblr fa-lg"></i><a href="http://hakusen-drw.tumblr.com" target="_blank">hakusen-drw.tumblr.com</a></li>
+      </ul>
+      <h1>- 副主催 -</h1>
+      <ul class="fa-ul">
+	<li><i class="fa-li fa fa-user fa-lg"></i>冬日あおい (Melty Blue)</li>
+	<li><i class="fa-li fa fa-twitter fa-lg"></i><a href="https://twitter.com/aoi_sne11" target="_blank">@aoi_sne11</a></li>
+	<li><i class="fa-li fa fa-picture-o fa-lg"></i><a href="http://www.pixiv.net/member.php?id=822768" target="_blank">Pixiv (id: 822768)</a></li>
+      </ul>
+      <h1>- ウェブサイト -</h1>
+      <ul class="fa-ul">
+	<li><i class="fa-li fa fa-user fa-lg"></i>Yadex205</li>
+	<li><i class="fa-li fa fa-twitter fa-lg"></i><a href="https://twitter.com/yadex205" target="_blank">@yadex205</a></li>
+	<li><i class="fa-li fa fa-globe fa-lg"></i><a href="http://www.yadex205.info" target="_blank">www.yadex205.info</a></li>
+      </ul>
+    </section>
+    <section id="links">
+      <p class="top">Links/リンク</p>
+      <ul>
+	<li>
+	  <a href="http://www.puniket.com/lovelive/" target="_blank">
+	    <img alt="" src="images/banner/lovelive_banner01[1].jpg"/>
+	    ラブライブ!オンリーイベント 僕らのラブライブ!
+	  </a>
+	</li>
+	<li>
+	  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.jamuse-anthology.info" data-text="「ジャミューズ合同誌 テイレシアスの悪戯」 / Jamuse Anthology - A Joke of Tiresias" data-lang="ja" data-size="large">ツイート</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</li>
+      </ul>
+    </section>
+    
+    <footer>
+      <p>
+	Powered by...<br>
+	+ Vue.js - MVVM made simple<br>
+	+ FontAwesome - The Iconic Font and CSS Toolkit<br>
+	+ Compass/SASS
+      </p>
+      <p>
+	If this page has problem(s), please contact <a href="https://twitter.com/yadex205" target="_blank">@yadex205</a> on Twitter.
+      </p>
+      <p>
+	Copyright &copy; 2014-2015 Jamuse Anthology 'A Joke of Tiresias' All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
